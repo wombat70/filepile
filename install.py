@@ -18,14 +18,14 @@ from weecfg.extension import ExtensionInstaller
 filepile_config = """
     [FilePile]
         # Where to find the incoming new data:
-        filename = /var/tmp/filepile.txt
+        filename = /var/tmp/aquarium-temp.txt
         # What unit system they will be in.
         # Choices are 'US', 'METRIC', or 'METRICWX'
         unit_system = METRICWX
         # Map from incoming names, to WeeWX names.
         [[label_map]]
             # Example: incoming observation 'filelabel1' will be mapped to 'extraTemp4'
-            filelabel1 = extraTemp4
+            aquarium_temp = aquariumTemp
 """
 
 filepile_dict = configobj.ConfigObj(StringIO(filepile_config))
